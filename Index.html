@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GAC App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="assets/logo.svg" alt="GAC Logo" />
+        <h2>GAC Hub</h2>
+      </div>
+      <nav>
+        <button class="nav-btn" data-section="dashboard">🏠 Dashboard</button>
+        <button class="nav-btn" data-section="economy">💰 Economy</button>
+        <button class="nav-btn" data-section="business">🏢 Businesses</button>
+        <button class="nav-btn" data-section="realestate">🏡 Real Estate</button>
+        <button class="nav-btn" data-section="education">🎓 Education</button>
+        <button class="nav-btn" data-section="community">🌐 Community</button>
+        <button class="nav-btn" data-section="admin">⚙️ Admin</button>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <!-- Topbar -->
+      <header class="topbar">
+        <h1 id="section-title">Dashboard</h1>
+        <div class="user-info" id="user-info">
+          <span id="username">Guest</span>
+          <button id="logout-btn">Logout</button>
+        </div>
+      </header>
+
+      <!-- Sections -->
+      <section id="dashboard" class="section active">
+        <h2>Welcome to the Galore Avakin Community App</h2>
+        <p>Manage your virtual world — economy, businesses, real estate, education, and community — all in one immersive hub.</p>
+        <button id="signup-btn">Sign Up / Log In</button>
+      </section>
+
+      <section id="economy" class="section">
+        <h2>Economy</h2>
+        <div id="wallet"></div>
+        <form id="bank-form">
+          <input type="number" id="amount" placeholder="Amount" />
+          <button type="button" id="deposit-btn">Deposit</button>
+          <button type="button" id="withdraw-btn">Withdraw</button>
+        </form>
+        <div id="stocks"></div>
+      </section>
+
+      <section id="business" class="section">
+        <h2>Businesses</h2>
+        <form id="business-form">
+          <input type="text" id="business-name" placeholder="Business Name" />
+          <button type="button" id="add-business-btn">Add Business</button>
+        </form>
+        <ul id="business-list"></ul>
+      </section>
+
+      <section id="realestate" class="section">
+        <h2>Real Estate</h2>
+        <form id="property-form">
+          <input type="text" id="property-name" placeholder="Property Name" />
+          <input type="text" id="property-type" placeholder="Residential / Commercial" />
+          <button type="button" id="add-property-btn">Add Property</button>
+        </form>
+        <ul id="property-list"></ul>
+      </section>
+
+      <section id="education" class="section">
+        <h2>Education</h2>
+        <form id="course-form">
+          <input type="text" id="course-name" placeholder="Course Name" />
+          <button type="button" id="add-course-btn">Add Course</button>
+        </form>
+        <ul id="course-list"></ul>
+      </section>
+
+      <section id="community" class="section">
+        <h2>Community</h2>
+        <form id="post-form">
+          <input type="text" id="post-content" placeholder="Share something..." />
+          <button type="button" id="add-post-btn">Post</button>
+        </form>
+        <ul id="post-feed"></ul>
+      </section>
+
+      <section id="admin" class="section">
+        <h2>Admin Panel</h2>
+        <button id="seed-data-btn">Seed Demo Data</button>
+        <button id="clear-data-btn">Clear All Data</button>
+        <pre id="report"></pre>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
